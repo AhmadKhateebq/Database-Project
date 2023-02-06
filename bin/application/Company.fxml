@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="438.0" prefWidth="919.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CompanyController">
+   <left>
+      <AnchorPane prefHeight="434.0" prefWidth="922.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView layoutX="350.0" layoutY="37.0" prefHeight="232.0" prefWidth="558.0">
+              <columns>
+                <TableColumn fx:id="CompanyName" minWidth="0.0" prefWidth="108.0" text="Company Name" />
+                  <TableColumn prefWidth="75.0" text="Company ID" />
+                <TableColumn fx:id="phonenumber" prefWidth="135.0" text="phone Num" />
+                  <TableColumn fx:id="Email" minWidth="9.0" prefWidth="193.0" text="Email" />
+              </columns>
+            </TableView>
+            <Button fx:id="UpdateButton" layoutX="168.0" layoutY="302.0" mnemonicParsing="false" onAction="#UpdateClick" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: lightblue;" text="Update" />
+            <Button fx:id="addButton" layoutX="29.0" layoutY="302.0" mnemonicParsing="false" onAction="#AddClick" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: lightblue;" text="Add new Company" textAlignment="CENTER" />
+            <Label layoutX="29.0" layoutY="105.0" prefHeight="17.0" prefWidth="91.0" text="Company Name" />
+            <TextField fx:id="textname" layoutX="153.0" layoutY="101.0" prefHeight="25.0" prefWidth="171.0" />
+            <Label layoutX="34.0" layoutY="156.0" prefHeight="17.0" prefWidth="81.0" text="Phone Number" />
+            <Label layoutX="33.0" layoutY="208.0" text="Company Email" />
+            <TextField layoutX="153.0" layoutY="152.0" prefHeight="25.0" prefWidth="171.0" />
+            <TextField fx:id="EmailText" layoutX="153.0" layoutY="204.0" prefHeight="25.0" prefWidth="171.0" />
+            <Text layoutX="29.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="---------------------------------------------------------------" wrappingWidth="323.11328125" />
+            <Text fill="#2897e0" layoutX="29.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Companies Data" wrappingWidth="278.0">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Button fx:id="DeleteButton" layoutX="255.0" layoutY="302.0" mnemonicParsing="false" onAction="#DeleteClick" prefHeight="25.0" prefWidth="81.0" style="-fx-background-color: lightblue;" text="Delete" />
+            <Button fx:id="Exit" layoutX="802.0" layoutY="302.0" mnemonicParsing="false" onAction="#ExitClick" text="Exit" />
+            <ImageView fitHeight="37.0" fitWidth="45.0" layoutX="594.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Downloads/339-3392184_home-icons-blue-home-icon-blue-png.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="HomeButton" layoutX="647.0" layoutY="302.0" mnemonicParsing="false" onAction="#HomeClick" text="Home" />
+            <ImageView fitHeight="37.0" fitWidth="33.0" layoutX="747.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Downloads/dfvs.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

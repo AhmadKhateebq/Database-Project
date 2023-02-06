@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="634.0" prefWidth="664.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AccidentsController">
+   <center>
+      <AnchorPane prefHeight="655.0" prefWidth="664.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#2897e0" layoutX="227.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Accidents Records" wrappingWidth="210.0">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <TableView fx:id="Table" layoutX="42.0" layoutY="83.0" onMouseClicked="#getSelected" prefHeight="291.0" prefWidth="581.0">
+              <columns>
+                  <TableColumn fx:id="AccidentNo" minWidth="0.0" prefWidth="113.0" text="accidentNo" />
+                  <TableColumn fx:id="AccidentDate" prefWidth="126.0" text="accidentDate" />
+                  <TableColumn fx:id="AccidentLocation" prefWidth="122.0" text="accidentLocation" />
+                  <TableColumn fx:id="Cost" minWidth="9.0" prefWidth="95.0" text="Cost" />
+                  <TableColumn fx:id="carNumber" prefWidth="124.0" text="carNumber" />
+              </columns>
+            </TableView>
+            <Label layoutX="42.0" layoutY="405.0" prefHeight="17.0" prefWidth="91.0" text="Accident Date">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="42.0" layoutY="446.0" prefHeight="17.0" prefWidth="102.0" text="Accident Location">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="42.0" layoutY="532.0" text="Cost">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="42.0" layoutY="488.0" text="Car Number">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="AccidentDateText" layoutX="148.0" layoutY="401.0" prefHeight="25.0" prefWidth="171.0" promptText="Year-Month-Day" />
+            <TextField fx:id="AccidentLocationText" layoutX="148.0" layoutY="442.0" prefHeight="25.0" prefWidth="171.0" promptText="example: Ramallah Street" />
+            <TextField fx:id="CostText" layoutX="148.0" layoutY="528.0" prefHeight="25.0" prefWidth="171.0" promptText="in Double" />
+            <TextField fx:id="CarNumberText" layoutX="148.0" layoutY="484.0" prefHeight="25.0" prefWidth="171.0" promptText="ex: 1234567" />
+            <Button fx:id="UpdateButton" layoutX="562.0" layoutY="484.0" mnemonicParsing="false" onAction="#UpdateClick" prefHeight="25.0" prefWidth="83.0" text="Refresh" />
+            <Button fx:id="addButton" layoutX="437.0" layoutY="484.0" mnemonicParsing="false" onAction="#AddClick" prefHeight="25.0" prefWidth="119.0" text="Add new Accident" textAlignment="CENTER" />
+            <Button fx:id="ShowDataButton" layoutX="330.0" layoutY="484.0" mnemonicParsing="false" onAction="#ShowDataClick" text="Show All Data">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="EditButton" layoutX="330.0" layoutY="528.0" mnemonicParsing="false" onAction="#EditClick" prefHeight="25.0" prefWidth="226.0" text="Update By accident No" />
+            <Button fx:id="Exit" layoutX="599.0" layoutY="595.0" mnemonicParsing="false" onAction="#ExitClick" prefHeight="25.0" prefWidth="48.0" text="Exit" />
+            <ImageView fitHeight="28.0" fitWidth="27.0" layoutX="443.0" layoutY="595.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Downloads/339-3392184_home-icons-blue-home-icon-blue-png.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="HomeButton" layoutX="484.0" layoutY="595.0" mnemonicParsing="false" onAction="#HomeClick" text="Home" />
+            <ImageView fitHeight="28.0" fitWidth="25.0" layoutX="565.0" layoutY="595.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Downloads/dfvs.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="accidentNoText" layoutX="564.0" layoutY="528.0" prefHeight="25.0" prefWidth="82.0" promptText="#" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

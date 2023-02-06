@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HistoryController">
+   <top>
+      <AnchorPane prefHeight="598.0" prefWidth="780.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="208.0" layoutY="68.0" text="Enter Owner Personal ID (Customer) to view his Payment History">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="TextID" layoutX="208.0" layoutY="111.0" promptText="Personal ID" />
+            <Button fx:id="ViewButton" layoutX="363.0" layoutY="111.0" mnemonicParsing="false" onAction="#ViewClick" prefHeight="25.0" prefWidth="151.0" text="View Payment History" />
+            <TableView fx:id="Table" layoutX="17.0" layoutY="175.0" prefHeight="250.0" prefWidth="746.0">
+              <columns>
+                <TableColumn fx:id="sdateCol" prefWidth="124.0" text="service Start Date" />
+                <TableColumn fx:id="edateCol" prefWidth="119.0" text="Service End Date" />
+                  <TableColumn fx:id="StatusCol" prefWidth="124.0" text="Payament Status" />
+                  <TableColumn fx:id="AmountCol" prefWidth="115.0" text="Money Amount" />
+                  <TableColumn fx:id="IDCol" prefWidth="97.0" text="Owner ID" />
+                  <TableColumn fx:id="CarNumberCol" prefWidth="94.0" text="Car Number" />
+                  <TableColumn fx:id="ServiceIDCol" prefWidth="72.0" text="Service ID" />
+              </columns>
+            </TableView>
+            <Button fx:id="HomeButton" layoutX="17.0" layoutY="547.0" mnemonicParsing="false" onAction="#HomeClick" prefHeight="25.0" prefWidth="86.0" text="Home" />
+            <Button fx:id="AddButton" layoutX="505.0" layoutY="489.0" mnemonicParsing="false" onAction="#AddClick" prefHeight="25.0" prefWidth="150.0" text="Add new Pay" />
+            <TextField fx:id="sdText" layoutX="17.0" layoutY="453.0" promptText="Start Date" />
+            <TextField fx:id="edText" layoutX="178.0" layoutY="453.0" promptText="End Date" />
+            <TextField fx:id="AmountText" layoutX="505.0" layoutY="453.0" promptText="Amount" />
+            <TextField fx:id="StatusText" layoutX="343.0" layoutY="453.0" promptText="Status" />
+            <TextField fx:id="addIDText" layoutX="17.0" layoutY="489.0" promptText="Owner Personal ID" />
+            <TextField fx:id="CarNumberText" layoutX="178.0" layoutY="489.0" promptText="Car Number" />
+            <TextField fx:id="ServiceIDText" layoutX="343.0" layoutY="489.0" promptText="Srervice ID" />
+            <Button fx:id="showDataButton" layoutX="523.0" layoutY="111.0" mnemonicParsing="false" onAction="#showDataClick" prefHeight="25.0" prefWidth="50.0" text="All" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
